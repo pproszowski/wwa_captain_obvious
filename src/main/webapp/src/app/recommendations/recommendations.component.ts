@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductsProviderService} from '../products-provider/products-provider.service';
+import {Product} from '../product';
 
 @Component({
   selector: 'app-recommendations',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommendationsComponent implements OnInit {
 
-  constructor() { }
+  private recommendedProducts: Product[];
+
+  constructor(private recommendationsProvider: ProductsProviderService) { }
 
   ngOnInit() {
+      this.recommendedProducts = [];
+      // this.recommendationsProvider.getRecommendations().subscribe(result => this.recommendedProducts = result);
   }
 
 }
