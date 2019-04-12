@@ -1,0 +1,21 @@
+<!--<p>-->
+<!--  product-list works!-->
+<!--</p>-->
+
+
+<div>
+  <ul>
+    <li *ngFor="let product of products">
+      <div>
+        <img matListAvatar  [src]="product.image_url"/>
+        <h2>{{product.name}}</h2>
+      </div>
+      <div>
+        <p>{{product.price}}</p>
+      </div>
+
+
+    </li>
+  </ul>
+  <button class="btn btn-default" routerLink="/product-form"><span>Dodaj produkt</span></button>
+</div>
