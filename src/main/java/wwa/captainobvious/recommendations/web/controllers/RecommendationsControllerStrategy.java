@@ -17,6 +17,10 @@ public final class RecommendationsControllerStrategy implements RecommendationsC
 
     @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
-        return recommendationsRepository.get();
+        if (itemsIds == null) {
+            return recommendationsRepository.get();
+        } else {
+            return recommendationsRepository.get(itemsIds);
+        }
     }
 }
