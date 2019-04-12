@@ -1,0 +1,22 @@
+#product-img {
+    margin-right: 5%;
+}
+
+#product-name {
+    margin-right: 5%;
+}
+
+#product-price {
+    margin-right: 25%;
+    font-size: 2em;
+}
+
+#product-item {
+    padding: 10px;
+    background: aqua;
+}
+
+#product-count {
+    margin-right: 25%;
+
+}
