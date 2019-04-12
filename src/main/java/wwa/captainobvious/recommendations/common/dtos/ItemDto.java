@@ -1,4 +1,4 @@
-package wwa.captainobvious.recommendations.web.dtos;
+package wwa.captainobvious.recommendations.common.dtos;
 
 public class ItemDto {
 

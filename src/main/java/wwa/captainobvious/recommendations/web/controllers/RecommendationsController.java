@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
+import wwa.captainobvious.recommendations.common.dtos.RecommendationDto;
 
 import java.util.List;
 
