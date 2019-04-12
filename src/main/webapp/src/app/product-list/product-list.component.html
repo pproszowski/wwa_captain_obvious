@@ -1,0 +1,16 @@
+<!--<p>-->
+<!--  product-list works!-->
+<!--</p>-->
+
+
+<div class="container">
+    <mat-card>
+        <mat-list>
+            <mat-list-item *ngFor="let product of products">
+                <img [src]="product.image_url" matListAvatar/>
+                <h2>{{product.name}}</h2>
+                <p>{{product.price}}</p>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>
