@@ -18,7 +18,7 @@ public final class MockCart {
         List<CartDto> carts = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             CartDto cart = new CartDto();
-            cart.items = givenItems().stream().limit(10).collect(Collectors.toList());
+            cart.items = givenItems().stream().limit(4).collect(Collectors.toList());
             cart.total = i + 1;
             carts.add(cart);
         }
