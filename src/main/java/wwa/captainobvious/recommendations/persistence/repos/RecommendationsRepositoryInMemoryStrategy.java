@@ -17,14 +17,18 @@ public final class RecommendationsRepositoryInMemoryStrategy implements Recommen
     @Override
     public RecommendationDto get() {
         RecommendationDto recommendationDto = new RecommendationDto();
-        recommendationDto.items = items.stream().limit(10).unordered().collect(Collectors.toList());
+        recommendationDto.items = items.stream().limit(10).collect(Collectors.toList());
         return recommendationDto;
     }
 
     @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
         RecommendationDto recommendationDto = new RecommendationDto();
-        recommendationDto.items = items.stream().limit(10).unordered().collect(Collectors.toList());
+        recommendationDto.items = items
+            .stream()
+            .filter(itemDto -> itemsIds.contains(Integer.parseInt(itemDto.id)))
+            .limit(10)
+            .collect(Collectors.toList());
         return recommendationDto;
     }
 }
