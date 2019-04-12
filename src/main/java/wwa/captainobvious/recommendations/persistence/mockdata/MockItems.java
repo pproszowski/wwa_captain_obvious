@@ -3,6 +3,7 @@ package wwa.captainobvious.recommendations.persistence.mockdata;
 import wwa.captainobvious.recommendations.common.dtos.ItemDto;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public final class MockItems {
@@ -22,6 +23,7 @@ public final class MockItems {
             item.imageUrl = "https://discordemoji.com/assets/emoji/3142_noice.png";
             items.add(item);
         }
+        Collections.shuffle(items);
         return items;
     }
 }
