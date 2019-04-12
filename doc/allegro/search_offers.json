@@ -1,0 +1,162 @@
+{
+  "items": {
+    "promoted": [
+      {
+        "id": "string",
+        "name": "string",
+        "seller": {
+          "id": "string",
+          "company": true,
+          "superSeller": true
+        },
+        "promotion": {
+          "emphasized": true,
+          "bold": true,
+          "highlight": true
+        },
+        "delivery": {
+          "availableForFree": true,
+          "lowestPrice": {
+            "amount": 0,
+            "currency": "string"
+          }
+        },
+        "images": [
+          {
+            "url": "string"
+          }
+        ],
+        "sellingMode": {
+          "format": "string",
+          "price": {
+            "amount": 0,
+            "currency": "string"
+          },
+          "fixedPrice": {
+            "amount": 0,
+            "currency": "string"
+          },
+          "popularity": 0,
+          "bidCount": 0
+        },
+        "stock": {
+          "unit": "string",
+          "available": 0
+        },
+        "vendor": {
+          "id": "string",
+          "url": "string"
+        },
+        "category": {
+          "id": "string"
+        },
+        "publication": {
+          "endingAt": "string"
+        }
+      }
+    ],
+    "regular": [
+      {
+        "id": "string",
+        "name": "string",
+        "seller": {
+          "id": "string",
+          "company": true,
+          "superSeller": true
+        },
+        "promotion": {
+          "emphasized": true,
+          "bold": true,
+          "highlight": true
+        },
+        "delivery": {
+          "availableForFree": true,
+          "lowestPrice": {
+            "amount": 0,
+            "currency": "string"
+          }
+        },
+        "images": [
+          {
+            "url": "string"
+          }
+        ],
+        "sellingMode": {
+          "format": "string",
+          "price": {
+            "amount": 0,
+            "currency": "string"
+          },
+          "fixedPrice": {
+            "amount": 0,
+            "currency": "string"
+          },
+          "popularity": 0,
+          "bidCount": 0
+        },
+        "stock": {
+          "unit": "string",
+          "available": 0
+        },
+        "vendor": {
+          "id": "string",
+          "url": "string"
+        },
+        "category": {
+          "id": "string"
+        },
+        "publication": {
+          "endingAt": "string"
+        }
+      }
+    ]
+  },
+  "categories": {
+    "subcategories": [
+      {
+        "id": "string",
+        "name": "string",
+        "count": 0
+      }
+    ],
+    "path": [
+      {
+        "id": "string",
+        "name": "string",
+        "count": 0
+      }
+    ]
+  },
+  "filters": [
+    {
+      "id": "string",
+      "type": "string",
+      "name": "string",
+      "values": [
+        {
+          "name": "string",
+          "value": "string",
+          "idSuffix": "string",
+          "count": 0,
+          "selected": true
+        }
+      ],
+      "minValue": 0,
+      "maxValue": 0,
+      "unit": "string"
+    }
+  ],
+  "searchMeta": {
+    "availableCount": 0,
+    "totalCount": 0,
+    "fallback": true
+  },
+  "sort": [
+    {
+      "value": "string",
+      "name": "string",
+      "order": "string",
+      "selected": true
+    }
+  ]
+}
