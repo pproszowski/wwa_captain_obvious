@@ -1,0 +1,10 @@
+GET /api/cart
+
+    RESPONSE:
+    cart.json
+
+GET /api/recommendation?items_ids=1,2,3,4
+    itemsIds - lista id przedmiotów w koszyku
+
+    RESPONSE:
+    recommendation.json

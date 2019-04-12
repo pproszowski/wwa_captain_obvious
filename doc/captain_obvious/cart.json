@@ -3,9 +3,9 @@
     {
       "id": "string",
       "name": "string",
-      "category_id": "string",
-      "seller_id": "string",
-      "image_url": "image_url",
+      "categoryId": "string",
+      "sellerId": "string",
+      "imageUrl": "image_url",
       "price": 0,
       "count": 0
     }
