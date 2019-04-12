@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import wwa.captainobvious.recommendations.common.dtos.CartDto;
 
 import java.util.List;
+import java.util.Random;
 
 import static wwa.captainobvious.recommendations.persistence.mockdata.MockCart.givenCarts;
 
@@ -14,6 +15,7 @@ public final class CartRepositoryInMemoryStrategy implements CartRepository {
 
     @Override
     public CartDto get() {
-        return cartDtos.iterator().next();
+        Random rand = new Random();
+        return cartDtos.get(rand.nextInt(cartDtos.size()));
     }
 }

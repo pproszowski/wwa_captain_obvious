@@ -5,6 +5,7 @@ import wwa.captainobvious.recommendations.common.dtos.ItemDto;
 import wwa.captainobvious.recommendations.common.dtos.RecommendationDto;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static wwa.captainobvious.recommendations.persistence.mockdata.MockItems.givenItems;
 
@@ -16,14 +17,14 @@ public final class RecommendationsRepositoryInMemoryStrategy implements Recommen
     @Override
     public RecommendationDto get() {
         RecommendationDto recommendationDto = new RecommendationDto();
-        recommendationDto.items = items;
+        recommendationDto.items = items.stream().limit(10).unordered().collect(Collectors.toList());
         return recommendationDto;
     }
 
     @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
         RecommendationDto recommendationDto = new RecommendationDto();
-        recommendationDto.items = items;
+        recommendationDto.items = items.stream().limit(10).unordered().collect(Collectors.toList());
         return recommendationDto;
     }
 }
