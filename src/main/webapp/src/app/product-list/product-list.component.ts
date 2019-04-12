@@ -27,7 +27,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.products = [];
     this.products.push(new Product("Pendrive",30, "https://images-na.ssl-images-amazon.com/images/I/61fFVQlEB6L._SX425_.jpg"));
-    this.products.push(new Product("Peleryna",300, "/image2.jpg"));
+    this.products.push(new Product("Peleryna",300, "https://sklepanimatora.pl/data/gfx/pictures/medium/2/7/10372_2.png"));
 
   }
 }
