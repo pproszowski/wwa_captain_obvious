@@ -1,4 +1,4 @@
-package wwa.captainobvious.recommendations.persistence.repos;
+package wwa.captainobvious.recommendations.persistence.repositories;
 
 import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
 

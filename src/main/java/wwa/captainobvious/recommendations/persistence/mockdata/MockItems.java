@@ -2,8 +2,6 @@ package wwa.captainobvious.recommendations.persistence.mockdata;
 
 import wwa.captainobvious.recommendations.web.dtos.ItemDto;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public final class MockItems {
@@ -12,6 +10,7 @@ public final class MockItems {
     }
 
     public static List<ItemDto> givenItems() {
+/*
         List<ItemDto> items = Arrays.asList(new ItemDto("0",
                                                         "Dysk SEAGATE BarraCuda 1TB 7200obr. 64MB SATA 3",
                                                         "0",
@@ -72,7 +71,11 @@ public final class MockItems {
                                                         "https://3.allegroimg.com/s128/069e55/485f04e64516acda23724815bee3",
                                                         39,
                                                         1));
+*/
+/*
         Collections.shuffle(items);
         return items;
+*/
+        return null;
     }
 }

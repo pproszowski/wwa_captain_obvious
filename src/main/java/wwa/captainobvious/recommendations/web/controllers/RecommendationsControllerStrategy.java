@@ -1,8 +1,8 @@
 package wwa.captainobvious.recommendations.web.controllers;
 
 import org.springframework.stereotype.Component;
+import wwa.captainobvious.recommendations.persistence.repositories.RecommendationsRepository;
 import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
-import wwa.captainobvious.recommendations.persistence.repos.RecommendationsRepository;
 
 import java.util.List;
 

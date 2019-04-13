@@ -1,4 +1,4 @@
-package wwa.captainobvious.recommendations.web.dtos;
+package wwa.captainobvious.recommendations.persistence.dtos;
 
 public class ItemDto {
 

@@ -1,7 +1,7 @@
-package wwa.captainobvious.recommendations.persistence.repos;
+package wwa.captainobvious.recommendations.persistence.repositories;
 
 import org.springframework.stereotype.Component;
-import wwa.captainobvious.recommendations.persistence.dtos.WeightedItemDto;
+import wwa.captainobvious.recommendations.persistence.dtos.MeteredItemDto;
 import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
 
 import java.util.Comparator;
@@ -13,30 +13,34 @@ import static wwa.captainobvious.recommendations.persistence.mockdata.MockWeight
 @Component
 public final class RecommendationsRepositoryInMemoryStrategy implements RecommendationsRepository {
 
-    private final List<WeightedItemDto> items = givenWeightedItems();
+//    private final List<MeteredItemDto> items = givenWeightedItems();
 
     @Override
     public RecommendationDto get() {
         RecommendationDto recommendationDto = new RecommendationDto();
+/*
         recommendationDto.items = items
             .stream()
             .sorted(Comparator.comparingDouble(value -> value.weight))
-            .map(weightedItemDto -> weightedItemDto.item)
+            .map(meteredItemDto -> meteredItemDto.item)
             .limit(10)
             .collect(Collectors.toList());
+*/
         return recommendationDto;
     }
 
     @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
         RecommendationDto recommendationDto = new RecommendationDto();
+/*
         recommendationDto.items = items
             .stream()
             .sorted(Comparator.comparingDouble(value -> value.weight))
-            .map(weightedItemDto -> weightedItemDto.item)
+            .map(meteredItemDto -> meteredItemDto.item)
             .filter(itemDto -> !itemsIds.contains(Integer.parseInt(itemDto.id)))
             .limit(10)
             .collect(Collectors.toList());
+*/
         return recommendationDto;
     }
 }

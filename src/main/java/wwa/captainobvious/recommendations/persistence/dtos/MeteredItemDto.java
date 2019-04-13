@@ -1,12 +1,10 @@
 package wwa.captainobvious.recommendations.persistence.dtos;
 
-import wwa.captainobvious.recommendations.web.dtos.ItemDto;
+public class MeteredItemDto {
 
-public class WeightedItemDto {
-
+    public ItemDto item;
     public double priceWeight;
     public double similarWeight;
     public double alsoBoughtWeight;
     public double weight;
-    public ItemDto item;
 }
