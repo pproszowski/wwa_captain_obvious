@@ -6,3 +6,7 @@ img{
 mat-grid-tile{
     margin: 0!important;
 }
+
+.mat-raised-button{
+    background: #EB7835;
+}
