@@ -1,17 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-class Product {
-
-  name: string;
-  price: number;
-  image_url: string;
-
-  constructor(name, price, image_url){
-    this.name = name;
-    this.price = price;
-    this.image_url = image_url;
-  }
-}
+import {ProductsProviderService} from '../products-provider/products-provider.service';
+import {Cart} from '../cart';
+import {Product} from '../product';
 
 @Component({
   selector: 'app-product-list',
@@ -20,14 +10,16 @@ class Product {
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[];
+    cart: Cart;
+    products: Product[];
 
-  constructor() { }
+  constructor(private productsProvider: ProductsProviderService) { }
 
   ngOnInit() {
-    this.products = [];
-    this.products.push(new Product("Pendrive",30, "https://images-na.ssl-images-amazon.com/images/I/61fFVQlEB6L._SX425_.jpg"));
-    this.products.push(new Product("Peleryna",300, "https://sklepanimatora.pl/data/gfx/pictures/medium/2/7/10372_2.png"));
-
+    this.productsProvider.getCart().subscribe(cart => {
+          this.cart = cart;
+          this.products = cart.items;
+        }
+    );
   }
 }
