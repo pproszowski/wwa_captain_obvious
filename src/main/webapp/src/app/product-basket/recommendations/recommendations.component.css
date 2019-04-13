@@ -2,5 +2,8 @@
     padding: 2em;
     max-height: 12em;
     max-width: 12em;
+}
+
+.mat-grid-tile{
     cursor: pointer;
 }
