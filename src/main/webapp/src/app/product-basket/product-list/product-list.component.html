@@ -1,0 +1,18 @@
+<div class="container">
+    <mat-card>
+        <mat-grid-list [cols]="4" rowHeight="6vh" *ngFor="let product of products">
+            <mat-grid-tile><img [src]="product.imageUrl" matListAvatar/></mat-grid-tile>
+            <mat-grid-tile><p>{{product.name}}</p></mat-grid-tile>
+            <mat-grid-tile>
+                <form><input matInput type="number" value="{{product.count}}"></form>
+            </mat-grid-tile>
+            <mat-grid-tile><p>{{product.price}} zł</p></mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list [cols]="4" rowHeight="6vh">
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile><b><p>Razem: {{total.price}} zł</p></b></mat-grid-tile>
+        </mat-grid-list>
+    </mat-card>
+</div>

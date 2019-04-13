@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>
+            Dobierz do zakupu
+            <img mat-card-avatar class="thumbnail"
+                 src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F2244555596%2F399186_257170807704873_239842232771064_574516_180755771_n.jpg&f=1"/>
+        </mat-card-title>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-sm-3" *ngFor="let product of recommendedProducts" (click)="addProduct(product)">
+                        <img mat-card-image src="{{product.imageUrl}}" alt=""/>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

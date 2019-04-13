@@ -1,0 +1,6 @@
+.mat-card-image{
+    padding: 2em;
+    max-height: 12em;
+    max-width: 12em;
+    cursor: pointer;
+}
