@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProductsProviderService} from '../products-provider/products-provider.service';
 import {Cart} from '../cart';
 import {Product} from '../product';
+import {TotalPrice} from '../total-price';
 
 @Component({
     selector: 'app-product-basket',
@@ -13,6 +14,7 @@ export class ProductBasketComponent implements OnInit {
     private cart: Cart;
     private recommended: Product[];
     private selected: Product[];
+    private total = new TotalPrice();
 
     constructor(private productsProvider: ProductsProviderService) {
     }
@@ -22,6 +24,7 @@ export class ProductBasketComponent implements OnInit {
                 this.cart = cart;
                 this.selected = cart.selected;
                 this.recommended = cart.recommended;
+                this.total.price = cart.total;
             }
         );
     }

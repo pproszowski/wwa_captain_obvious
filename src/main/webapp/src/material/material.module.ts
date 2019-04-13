@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatCardModule, MatListModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatCardModule, MatGridListModule, MatListModule, MatProgressSpinnerModule} from '@angular/material';
 
 @NgModule({
     declarations: [],
@@ -9,11 +9,13 @@ import {MatCardModule, MatListModule, MatProgressSpinnerModule} from '@angular/m
         MatProgressSpinnerModule,
         MatCardModule,
         MatListModule,
+        MatGridListModule
     ],
     exports: [
         MatProgressSpinnerModule,
         MatCardModule,
         MatListModule,
+        MatGridListModule
     ]
 })
 export class MaterialModule {

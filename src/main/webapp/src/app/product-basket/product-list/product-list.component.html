@@ -1,17 +1,16 @@
-<!--<p>-->
-<!--  product-list works!-->
-<!--</p>-->
-
-
 <div class="container">
     <mat-card>
-        <mat-list>
-            <mat-list-item *ngFor="let product of products">
-                <div id="product-img"><img [src]="product.imageUrl" matListAvatar/></div>
-                <div id="product-name"><h2>{{product.name}}</h2></div>
-                <div id="product-count"><p>-{{product.count}}+</p></div>
-                <div id="product-price"><p>{{product.price}} zł</p></div>
-            </mat-list-item>
-        </mat-list>
+        <mat-grid-list [cols]="4" rowHeight="6vh" *ngFor="let product of products">
+            <mat-grid-tile> <img [src]="product.imageUrl" matListAvatar/> </mat-grid-tile>
+            <mat-grid-tile> <p>{{product.name}}</p> </mat-grid-tile>
+            <mat-grid-tile> <p>-{{product.count}}+</p> </mat-grid-tile>
+            <mat-grid-tile> <p>{{product.price}} zł</p> </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list [cols]="4" rowHeight="6vh">
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile><b><p>Razem: {{total.price}} zł</p></b></mat-grid-tile>
+        </mat-grid-list>
     </mat-card>
 </div>
