@@ -9,6 +9,7 @@ import {RecommendationsComponent} from './product-basket/recommendations/recomme
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '../material/material.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
