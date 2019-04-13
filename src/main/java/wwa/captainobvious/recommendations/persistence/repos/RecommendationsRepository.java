@@ -6,7 +6,5 @@ import java.util.List;
 
 public interface RecommendationsRepository {
 
-    RecommendationDto get();
-
     RecommendationDto get(List<Integer> itemsIds);
 }
