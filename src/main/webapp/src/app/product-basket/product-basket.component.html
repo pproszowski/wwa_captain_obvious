@@ -5,6 +5,11 @@
     </mat-card>
 </div>
 <div class="space"></div>
-<app-product-list [selected]="selected"></app-product-list>
+<app-product-list [selected]="selected" [total]="total"></app-product-list>
 <div class="space"></div>
-<app-recommendations [recommended]="recommended" [selected]="selected" [productsProvider]="productsProvider"></app-recommendations>
+<app-recommendations
+        [recommended]="recommended"
+        [selected]="selected"
+        [productsProvider]="productsProvider"
+        [total]="total">
+</app-recommendations>
