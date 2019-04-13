@@ -11,9 +11,24 @@ export class ProductListComponent implements OnInit {
 
   @Input('selected') products: Product[];
   @Input() total: TotalPrice;
+  product_value: number;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  firechange(){
+
+    let price = 0;
+    this.products.forEach(product => price += product.count * product.price);
+    this.total.price = price;
+
+  }
+
+
+  myFunction(product: Product) {
+    this.products = this.products.filter(obj => obj !== product);
+    this.firechange();
   }
 }

@@ -10,3 +10,9 @@ mat-grid-tile{
 .mat-raised-button{
     background: #EB7835;
 }
+
+.mat-button {
+    margin-top: 5px;
+    float: right;
+}
+
