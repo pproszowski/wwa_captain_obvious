@@ -1,6 +1,6 @@
 package wwa.captainobvious.recommendations.persistence.repos;
 
-import wwa.captainobvious.recommendations.common.dtos.ItemDto;
+import wwa.captainobvious.recommendations.web.dtos.ItemDto;
 
 public class Evaluator {
 
