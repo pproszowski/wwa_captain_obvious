@@ -1,4 +1,4 @@
-package wwa.captainobvious.recommendations.common.dtos;
+package wwa.captainobvious.recommendations.web.dtos;
 
 import java.util.List;
 

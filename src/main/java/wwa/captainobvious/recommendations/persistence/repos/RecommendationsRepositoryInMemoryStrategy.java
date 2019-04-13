@@ -1,8 +1,8 @@
 package wwa.captainobvious.recommendations.persistence.repos;
 
 import org.springframework.stereotype.Component;
-import wwa.captainobvious.recommendations.common.dtos.ItemDto;
-import wwa.captainobvious.recommendations.common.dtos.RecommendationDto;
+import wwa.captainobvious.recommendations.web.dtos.ItemDto;
+import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

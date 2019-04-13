@@ -1,6 +1,6 @@
 package wwa.captainobvious.recommendations.persistence.repos;
 
-import wwa.captainobvious.recommendations.common.dtos.CartDto;
+import wwa.captainobvious.recommendations.web.dtos.CartDto;
 
 public interface CartRepository {
 
