@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import wwa.captainobvious.recommendations.common.dtos.CartDto;
+import wwa.captainobvious.recommendations.web.dtos.CartDto;
 
 @RestController
 @RequestMapping(path = "api/cart")

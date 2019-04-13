@@ -1,7 +1,7 @@
 package wwa.captainobvious.recommendations.persistence.repos;
 
 import org.springframework.stereotype.Component;
-import wwa.captainobvious.recommendations.common.dtos.CartDto;
+import wwa.captainobvious.recommendations.web.dtos.CartDto;
 
 import java.util.List;
 
