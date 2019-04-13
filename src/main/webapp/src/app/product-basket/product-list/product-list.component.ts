@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
-  firechange(event){
+  firechange(){
 
     let price = 0;
     this.products.forEach(product => price += product.count * product.price);
@@ -27,4 +27,8 @@ export class ProductListComponent implements OnInit {
   }
 
 
+  myFunction(product: Product) {
+    this.products = this.products.filter(obj => obj !== product);
+    this.firechange();
+  }
 }

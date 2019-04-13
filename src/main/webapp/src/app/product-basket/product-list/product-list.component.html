@@ -5,10 +5,12 @@
             <mat-grid-tile><p>{{product.name}}</p></mat-grid-tile>
             <mat-grid-tile>
                 <form><input min="1" matInput type="number" name="product_count"
-                             [(ngModel)]="product.count" (change)="firechange($event)"></form>
+                             [(ngModel)]="product.count" (change)="firechange()"></form>
             </mat-grid-tile>
             <mat-grid-tile><p>{{product.price*product.count}} zł</p></mat-grid-tile>
+            <button mat-button (click)="myFunction(product)">X</button>
         </mat-grid-list>
+
         <mat-grid-list [cols]="4" rowHeight="6vh">
             <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile>
             <mat-grid-tile><b><p>Razem: {{total.price}} zł</p></b></mat-grid-tile>
