@@ -14,8 +14,7 @@ export class RecommendationsComponent implements OnInit {
   constructor(private recommendationsProvider: ProductsProviderService) { }
 
   ngOnInit() {
-      this.recommendedProducts = [];
-      // this.recommendationsProvider.getRecommendations().subscribe(result => this.recommendedProducts = result);
+    this.recommendationsProvider.getRecommendations().subscribe(result => this.recommendedProducts = result);
   }
 
 }
