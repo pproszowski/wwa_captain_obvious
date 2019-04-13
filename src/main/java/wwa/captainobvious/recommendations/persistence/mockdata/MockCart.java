@@ -1,6 +1,6 @@
 package wwa.captainobvious.recommendations.persistence.mockdata;
 
-import wwa.captainobvious.recommendations.web.dtos.CartDto;
+import wwa.captainobvious.recommendations.persistence.dtos.CartDto;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -15,8 +15,7 @@ public final class MockWeightedItemDto {
     public static List<MeteredItemDto> givenWeightedItems() {
         return givenItems().stream().map(itemDto -> {
             MeteredItemDto dto = new MeteredItemDto();
-
-//            dto.item = itemDto;
+            dto.item = itemDto;
             return dto;
         }).collect(Collectors.toList());
     }
