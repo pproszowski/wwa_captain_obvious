@@ -1,6 +1,7 @@
 import {Product} from './product';
 
 export class Cart {
-    items: Product[];
+    selected: Product[];
+    recommended: Product[];
     total: number;
 }

@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductsProviderService} from '../products-provider/products-provider.service';
 import {Product} from '../product';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-recommendations',
-  templateUrl: './recommendations.component.html',
-  styleUrls: ['./recommendations.component.css']
+    selector: 'app-recommendations',
+    templateUrl: './recommendations.component.html',
+    styleUrls: ['./recommendations.component.css']
 })
 export class RecommendationsComponent implements OnInit {
 
-  private recommendedProducts: Observable<Product[]>;
+    private recommendedProducts: Product[];
 
-  constructor(private recommendationsProvider: ProductsProviderService) { }
+    constructor(private recommendationsProvider: ProductsProviderService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.recommendationsProvider.getCart().subscribe(cart =>
+            this.recommendedProducts = cart.recommended);
+    }
 
 }

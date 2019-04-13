@@ -1,3 +1,5 @@
 .mat-card-image{
     padding: 2em;
+    max-height: 15em;
+    max-width: 15em;
 }
