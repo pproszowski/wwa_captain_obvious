@@ -7,7 +7,7 @@
     <mat-card>
         <mat-list>
             <mat-list-item *ngFor="let product of products">
-                <div id="product-img"><img [src]="product.image_url" matListAvatar/></div>
+                <div id="product-img"><img [src]="product.imageUrl" matListAvatar/></div>
                 <div id="product-name"><h2>{{product.name}}</h2></div>
                 <div id="product-count"><p>-{{product.count}}+</p></div>
                 <div id="product-price"><p>{{product.price}} zł</p></div>
