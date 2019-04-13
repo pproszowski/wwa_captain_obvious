@@ -1,20 +1,31 @@
 <div class="container">
     <mat-card>
         <mat-card-title>
-            Dobierz do zakupu
-            <img mat-card-avatar class="thumbnail"
-                 src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F2244555596%2F399186_257170807704873_239842232771064_574516_180755771_n.jpg&f=1"/>
+            <div *ngIf="(40-total.price)>0; else elseBlock">
+                <div class="incentive_logo">
+                    <img class="thumbnail"
+                         src="https://assets.allegrostatic.com/opbox/allegro.pl/smart/Smart%20-%20mainpage/6Uw1WEeUX8u4FUKvUz3E4D-w1200-h257.png"/>
+                    Dla darmowej przesyłki dobierz produkt za minumum {{40 - total.price}} zł.
+                </div>
+            </div>
+
+            <ng-template #elseBlock>
+                <div class="incentive_logo">
+                    <img class="thumbnail"
+                         src="https://assets.allegrostatic.com/opbox/allegro.pl/smart/Smart%20-%20mainpage/6Uw1WEeUX8u4FUKvUz3E4D-w1200-h257.png"/>
+                    Dla darmowej przesyłki dobierz produkt.
+                </div>
+            </ng-template>
         </mat-card-title>
         <mat-card-content>
-            <mat-grid-list [cols]="4" rowHeight="22vh">
-                <mat-grid-tile *ngFor="let product of recommendedProducts" (click)="addProduct(product)">
+            <mat-grid-list [cols]="4" rowHeight="32vh">
+                <mat-grid-tile (click)="addProduct(product)" *ngFor="let product of recommendedProducts">
                     <div class="row">
                         <div class="col-sm-12">
                             <p>{{product.name}}</p>
                         </div>
                         <div class="col-sm-12">
-                            <img src="{{product.imageUrl}}" alt=""/>
-                        </div>
+                            <div class="recommend_img"><img alt="" src="{{product.imageUrl}}"/></div></div>
                         <div class="col-sm-12">
                             <p>{{product.price}} zł</p>
                         </div>
