@@ -1,5 +1,5 @@
 {
-  "items": [
+  "selected": [
     {
       "id": "string",
       "name": "string",
@@ -10,5 +10,16 @@
       "count": 0
     }
   ],
-  "total": 0
+  "total": 0,
+  "recommended": [
+    {
+      "id": "string",
+      "name": "string",
+      "categoryId": "string",
+      "sellerId": "string",
+      "imageUrl": "image_url",
+      "price": 0,
+      "count": 0
+    }
+  ]
 }
