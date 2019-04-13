@@ -16,18 +16,6 @@ public final class RecommendationsRepositoryInMemoryStrategy implements Recommen
     private final List<WeightedItemDto> items = givenWeightedItems();
 
     @Override
-    public RecommendationDto get() {
-        RecommendationDto recommendationDto = new RecommendationDto();
-        recommendationDto.items = items
-            .stream()
-            .sorted(Comparator.comparingDouble(value -> value.weight))
-            .map(weightedItemDto -> weightedItemDto.item)
-            .limit(10)
-            .collect(Collectors.toList());
-        return recommendationDto;
-    }
-
-    @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
         RecommendationDto recommendationDto = new RecommendationDto();
         recommendationDto.items = items
