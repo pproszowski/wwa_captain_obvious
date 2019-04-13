@@ -9,10 +9,10 @@
             <mat-grid-tile><p>{{product.price}} zł</p></mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list [cols]="4" rowHeight="6vh">
-            <mat-grid-tile></mat-grid-tile>
-            <mat-grid-tile></mat-grid-tile>
-            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile>
             <mat-grid-tile><b><p>Razem: {{total.price}} zł</p></b></mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile> <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile><button mat-raised-button color="primary">Dostawa i Płatność</button></mat-grid-tile>
         </mat-grid-list>
     </mat-card>
 </div>
