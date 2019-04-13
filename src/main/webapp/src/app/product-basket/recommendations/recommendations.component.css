@@ -7,3 +7,19 @@
 .mat-grid-tile{
     cursor: pointer;
 }
+
+
+.thumbnail{
+    max-width: 250px;
+    height: auto;
+}
+
+.incentive_logo {
+    margin-bottom: 10px;
+}
+
+.recommend_img {
+    min-height: 100px;
+
+
+}
