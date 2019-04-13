@@ -12,7 +12,10 @@ export class ProductsProviderService {
     private baseUrl = 'http://localhost:8080/api/';
 
     constructor(private http: HttpClient) {
-        this.http.get<Cart>(this.baseUrl + 'cart').subscribe(cart => console.log(cart));
+        this.http.get<Cart>(this.baseUrl + 'cart').subscribe(cart =>{
+            this.cart = cart;
+            console.log(cart);
+        });
     }
 
     getRecommendations() {
