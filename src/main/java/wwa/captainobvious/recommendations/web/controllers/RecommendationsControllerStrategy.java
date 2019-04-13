@@ -1,8 +1,8 @@
 package wwa.captainobvious.recommendations.web.controllers;
 
 import org.springframework.stereotype.Component;
-import wwa.captainobvious.recommendations.persistence.repos.RecommendationsRepository;
 import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
+import wwa.captainobvious.recommendations.persistence.repos.RecommendationsRepository;
 
 import java.util.List;
 
@@ -17,6 +17,10 @@ public final class RecommendationsControllerStrategy implements RecommendationsC
 
     @Override
     public RecommendationDto get(final List<Integer> itemsIds) {
-        return recommendationsRepository.get(itemsIds);
+        if (itemsIds == null) {
+            return recommendationsRepository.get();
+        } else {
+            return recommendationsRepository.get(itemsIds);
+        }
     }
 }
