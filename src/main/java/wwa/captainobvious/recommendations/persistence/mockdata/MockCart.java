@@ -1,6 +1,6 @@
 package wwa.captainobvious.recommendations.persistence.mockdata;
 
-import wwa.captainobvious.recommendations.common.dtos.CartDto;
+import wwa.captainobvious.recommendations.web.dtos.CartDto;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +20,7 @@ public final class MockCart {
             CartDto cart = new CartDto();
             cart.selected = givenItems().stream().limit(4).collect(Collectors.toList());
             cart.recommended = givenItems().stream().limit(4).collect(Collectors.toList());
-            cart.total = i + 1;
+            cart.total = cart.selected.stream().mapToInt(x -> x.price).sum();
             carts.add(cart);
         }
         Collections.shuffle(carts);

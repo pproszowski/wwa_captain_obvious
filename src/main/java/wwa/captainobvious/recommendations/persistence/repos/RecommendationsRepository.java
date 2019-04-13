@@ -1,6 +1,6 @@
 package wwa.captainobvious.recommendations.persistence.repos;
 
-import wwa.captainobvious.recommendations.common.dtos.RecommendationDto;
+import wwa.captainobvious.recommendations.web.dtos.RecommendationDto;
 
 import java.util.List;
 
