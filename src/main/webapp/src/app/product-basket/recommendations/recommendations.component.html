@@ -7,7 +7,7 @@
         </mat-card-title>
         <mat-card-content>
             <div class="row">
-                <div class="col-sm-3" *ngFor="let product of recommendedProducts">
+                <div class="col-sm-3" *ngFor="let product of recommendedProducts" (click)="addProduct(product)">
                         <img mat-card-image src="{{product.imageUrl}}" alt=""/>
                 </div>
             </div>
